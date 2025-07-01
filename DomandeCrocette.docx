@@ -1,0 +1,237 @@
+**1** 
+Quale delle seguenti affermazioni è FALSA riguardo alle reti MLP (Multilayer Perceptron)?
+
+- Le reti MLP sono composte da uno o più strati nascosti di neuroni.
+- Le reti MLP utilizzano una funzione di attivazione non lineare per introdurre una non linearità nel modello.
+
+- Le reti MLP sono in grado di apprendere solo relazioni lineari tra i dati di input e output.
+
+- Le reti MLP possono essere utilizzate per risolvere una vasta gamma di problemi di apprendimento automatico, tra cui la classificazione e la regressione.
+
+
+**2.**  Quale delle seguenti affermazioni è la definizione CORRETTA di learning rate nel training di una rete neurale?
+
+A) Il numero di volte in cui l'intero set di dati viene utilizzato durante il training.
+
+B) Un parametro che controlla la velocità con cui i pesi della rete vengono aggiornati durante il training.
+
+C) Il numero di neuroni presenti nello strato di output della rete.
+
+D) La funzione di attivazione utilizzata dai neuroni della rete
+
+3- Quale delle seguenti affermazioni è vera riguardo ai layer convoluzionali in una rete CNN?
+
+(a) I layer convoluzionali applicano una funzione di attivazione a ciascun elemento della feature map in ingresso.
+
+(b) I layer convoluzionali eseguono una convoluzione tra i filtri convoluzionali e la feature map in ingresso, producendo una nuova feature map.
+
+(c) I layer convoluzionali riducono la dimensione spaziale della feature map in ingresso.
+
+(d) I layer convoluzionali aumentano la dimensione spaziale della feature map in ingresso.
+
+**4.**  
+Quale tra le seguenti affermazioni descrive   il compito della funzione di attivazione nel training di una rete neurale?
+
+- Trasformare i dati di input in un formato compatibile con la rete neurale
+
+- Introdurre una non linearità nel flusso di informazioni della rete
+
+- Calcolare l'errore tra l'output previsto e quello effettivo
+
+- Aggiornare i pesi delle connessioni tra i neuroni softmax
+
+**5.** Quale tra le seguenti affermazioni è FALSA riguardo alla suddivisione del dataset in un contesto di machine learning?
+
+- La suddivisione del dataset in set di training, validation e test è fondamentale per valutare correttamente le prestazioni di un modello di machine learning.
+- Il set di training viene utilizzato per addestrare il modello sui dati.
+- Il set di validation viene utilizzato per trovare le etichette dei dati di input
+- Il set di test viene utilizzato per valutare le prestazioni finali del modello su dati che non sono stati utilizzati per il training o la validation
+
+** 6 Risolvere un problema mediante Machine Learning significa**:
+- Fornire alla macchina i dati affinchè impari da sola a risolvere il problema
+- Fornire alla macchina solo dati etichettati affinchè impari da sola a risolvere il problema
+- Fornire alla macchina solo dati non etichettati affinchè impari da sola a risolvere il problema
+- Fornire alla macchina le esatte istruzioni per risolvere il problema
+edizione
+
+**7  A cosa serve il validation set?**
+
+-  A trovare i migliori iperparametri del modello
+
+-  Ad addestrare il modello
+
+-  A testare il modello
+
+-  A trovare le etichette dei dati di input
+
+
+**8  Una classica rete CNN è solitamente composta da:**
+
+· Layer convolutivi seguiti da layer di pooling, flatten layer e neuroni completamente connessi
+
+· Layer di pooling seguiti da layer convolutivi, flatten layer e neuroni completamente connessi
+
+· Layer convolutivi seguiti da layer di pooling, flatten layer e softmax
+
+· Layer di pooling seguiti da layer convolutivi, flatten layer e softmax
+
+**9 Il livello softmax**
+- Trasforma i digits della rete in probabilità
+- Trasforma le probabilità della rete in digits
+- Normalizza i valori di input della rete
+- È indispensabile nel task di regressione della rete
+
+**10 Per una rete neurale, l’apprendimento è legato a:**
+- 	Minimizzare la funzione obiettivo
+- Minimizzare la funzione di attivazione
+- 	Massimizzare il valore dei pesi tramite l’algoritmo di back-propagation
+- Massimizzare il valore della funzione di training
+
+**11** 
+Quale delle seguenti affermazioni è FALSA riguardo alle reti MLP (Multilayer Perceptron)?
+
+- Le reti MLP sono composte da uno o più strati nascosti di neuroni.
+- Le reti MLP utilizzano una funzione di attivazione non lineare per introdurre una non linearità nel modello.
+
+- Le reti MLP sono in grado di apprendere solo relazioni lineari tra i dati di input e output.
+
+- Le reti MLP possono essere utilizzate per risolvere una vasta gamma di problemi di apprendimento automatico, tra cui la classificazione e la regressione.
+
+**12**  Quale delle seguenti affermazioni è la definizione CORRETTA di learning rate nel training di una rete neurale?
+
+A) Il numero di volte in cui l'intero set di dati viene utilizzato durante il training.
+
+B) Un parametro che controlla la velocità con cui i pesi della rete vengono aggiornati durante il training.
+
+C) Il numero di neuroni presenti nello strato di output della rete.
+
+D) La funzione di attivazione utilizzata dai neuroni della rete.ressione
+
+**13.**  
+Quale tra le seguenti affermazioni descrive meglio il compito della funzione di attivazione nel training di una rete neurale?
+
+- Trasformare i dati di input in un formato compatibile con la rete neurale
+
+- Introdurre una non linearità nel flusso di informazioni della rete
+
+- Calcolare l'errore tra l'output previsto e quello effettivo
+
+- Aggiornare i pesi delle connessioni tra i neuroni softmax
+
+**14.** Quale delle seguenti definizioni descrive meglio un'epoca nel training di una rete neurale?
+- Il numero di volte in cui viene aggiornato un singolo peso nella rete
+- Il tempo impiegato per completare un ciclo di forward pass e backward propagation
+- Il numero di volte in cui l'intero set di dati di training viene esposto alla rete
+- Una misura della complessità del modello di rete neurale
+
+**15.** Quale tra le seguenti affermazioni è FALSA riguardo alla suddivisione del dataset in un contesto di machine learning?
+
+- La suddivisione del dataset in set di training, validation e test è fondamentale per valutare correttamente le prestazioni di un modello di machine learning.
+- Il set di training viene utilizzato per addestrare il modello sui dati.
+- Il set di validation viene utilizzato per trovare le etichette dei dati di input
+- Il set di test viene utilizzato per valutare le prestazioni finali del modello su dati che non sono stati utilizzati per il training o la validation.
+
+**16.** Quali sono i passaggi fondamentali all’interno del paradigma generale dell’Intelligenza Artificiale?
+
+•	Acquisizione dati, Data Processing, Addestramento del modello, Predizione e metriche
+
+•	Data Processing, Addestramento del Modello, Predizione, Analisi economica dei risultati
+
+•	Acquisizione dati, Data Processing, Addestramento del modello, Predizione, Test di Turing
+
+•	Acquisizione dati, Addestramento del Modello, Test di Turing, Predizione
+
+**17.** Per una rete neurale, l’apprendimento è legato a:
+
+•	Minimizzare la funzione obiettivo
+
+•	Minimizzare la funzione di attivazione
+
+•	Massimizzare il valore dei pesi tramite l’algoritmo di back-propagation
+
+•	Massimizzare il valore della funzione di training
+
+**18.**  Il Test di Turing serve a:
+
+•	Valutare se una macchina dimostra un comportamento intelligente
+
+•	Valutare il carico computazionale di un algoritmo di Intelligenza Artificiale
+
+•	Valutare la velocità di risposta di un algoritmo di Intelligenza Artificiale
+
+•	Valutare se una macchina dimostra un comportamento predicibile
+
+**19.**
+Le ultime e più recenti innovazioni nel campo dell’Intelligenza Artificiale sono:
+
+•	CNN, GAN e Transformers
+
+•	Expert Systems, CNN e GAN
+
+•	Expert Systems, Deep Learning e CNN
+
+•	CNN, Expert Systems e Transformers
+
+**20.** A cosa serve il validation set?
+
+•	A trovare i migliori iperparametri del modello
+
+•	Ad addestrare il modello 
+
+•	A testare il modello
+
+•	A trovare le etichette dei dati di input
+
+**21 Risolvere un problema mediante Machine Learning significa:**
+
+ -  Fornire alla macchina i dati affinchè impari da sola a risolvere il problema
+
+ - Fornire alla macchina solo dati etichettati affinchè impari da sola a risolvere il problema
+
+ - Fornire alla macchina solo dati non etichettati affinchè impari da sola a risolvere il problema
+
+ - Fornire alla macchina le esatte istruzioni per risolvere il problema
+
+ **22  A cosa serve il validation set?**
+
+-  A trovare i migliori iperparametri del modello
+
+-  Ad addestrare il modello
+
+-  A testare il modello
+
+-  A trovare le etichette dei dati di input
+
+**23  Cosa è un Multi-Layer Perceptron?**
+
+-  Una rete multi-livello composta da neuroni completamente connessi
+
+-  Una rete muti-livello composta da livelli convolutivi e neuroni completamente connessi
+
+-  Una rete a singolo livello composta da neuroni completamente connessi
+
+- Un neurone artificiale con un determinato input e determinati valori di uscita
+
+**24 Il livello softmax**
+
+- Trasforma i digits della rete in probabilità
+
+- Trasforma le probabilità della rete in digits
+
+-  Normalizza i valori di input della rete
+
+-  È indispensabile nel task di regressione
+
+
+**25 In cosa consiste il task di regressione?**
+
+· Nel predire un valore continuo in output
+
+· Nel predire una classe in output
+
+· Nel predire un gruppo di appartenenza del dato di input
+
+· Nel predire una categoria in output
+
+
+
