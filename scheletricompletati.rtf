@@ -1,0 +1,558 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2820
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fswiss\fcharset0 Helvetica;}
+{\colortbl;\red255\green255\blue255;}
+{\*\expandedcolortbl;;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\pard\tx720\tx1440\tx2160\tx2880\tx3600\tx4320\tx5040\tx5760\tx6480\tx7200\tx7920\tx8640\pardirnatural\partightenfactor0
+
+\f0\fs24 \cf0 #Function zeros\
+\
+import math\
+import numpy as np\
+import scipy as sp # type: ignore\
+from SolveTriangular import *\
+\
+def sign(x):\
+  """\
+  Sign function that returns 1 if x is positive, 0 if x is zero, and -1 if x is negative.\
+  """\
+  return math.copysign(1, x)\
+\
+def bisection_method(fname, a, b, tolx):\
+    \
+    fa=fname(a)\
+    fb=fname(b)\
+    if sign(fa) * sign(fb) >= 0:\
+        print("Bisection method cannot be applied \\n")\
+        return None, None,None\
+\
+    it = 0\
+    v_xk = []\
+\
+    \
+    \
+    while abs(b - a) >= tolx:\
+        xk = a + (b - a)/2\
+        v_xk.append(xk)\
+        it += 1\
+        fxk=fname(xk)\
+        if fxk==0:\
+            return xk, it, v_xk\
+\
+        if sign(fb) * sign(fxk) < 0:\
+            a = xk\
+            fa= fxk\
+        elif sign(fa) * sign(fxk) < 0:\
+            b =xk\
+            fb=fxk\
+\
+    \
+    return xk, it, v_xk\
+\
+def false_position(fname,a,b,tolx,tolf,maxit):\
+    fa=fname(a)\
+    fb=fname(b)\
+    if sign(fa) * sign(fb) >= 0:\
+       print("Bisection method not applicable")\
+       return None,None,None\
+\
+    it=0\
+    v_xk=[]\
+    fxk=1+tolf\
+    error=1+tolx\
+    xprec=a\
+\
+    while it < maxit and error >= tolx and abs(fxk) >= tolf:\
+        xk = a-fa*(b-a)/(fb-fa)\
+        v_xk.append(xk)\
+        it+=1\
+        fxk=fname(xk)\
+        if fxk==0:\
+            return xk,it,v_xk\
+\
+        if sign(fa) * sign(fxk) < 0:\
+           b= xk\
+           fb= fxk\
+        elif sign(fb) * sign(fxk) < 0:\
+           a=xk\
+           fa=fxk\
+        if xk!=0:\
+            error= abs(xk-xprec)/abs(xk)\
+        else:\
+            error=abs(xk-xprec)\
+        xprec=xk\
+    return xk,it,v_xk\
+\
+def chords(fname,slope,x0,tolx,tolf,nmax):\
+    # slope is the angular coefficient of the line that remains fixed for all iterations\
+    xk=[]\
+    it=0\
+    errorex=1+tolx\
+    erroref=1+tolf\
+\
+    while it < nmax and errorex >= tolx and erroref >= tolf:\
+        fx0=fname(x0)\
+        d=fx0/slope\
+        \
+        x1=x0 - d\
+        fx1=fname(x1)\
+        if x1!=0:\
+             errorex=abs(x1 - x0) / abs(x0) \
+        else:\
+             errorex=abs(x1 - x0)\
+        \
+        erroref=abs(fx1)\
+        x0=x1\
+        it=it+1\
+        xk.append(x1)\
+    return x1,it,xk\
+    \
+def newton(fname,fpname,x0,tolx,tolf,nmax):\
+    xk=[]\
+    it=0\
+    errorex=1+tolx\
+    erroref=1+tolf\
+    \
+    while it < nmax and errorex >= tolx and erroref >= tolf:\
+        fx0=fname(x0)\
+        if abs(fpname(x0)) <= np.spacing(1): #If the first derivative is smaller than machine precision, stop\
+            print(" first derivative is zero in x0")\
+            return None, None,None\
+        d=fx0 / fpname(x0)\
+\
+        x1=x0 - d\
+        fx1=fname(x1)\
+        erroref=np.abs(fx1)\
+        if x1!=0:\
+            errorex=np.abs(x0 - x1) / np.abs(x0)\
+        else:\
+            errorex=np.abs(x0 - x1) \
+\
+        it=it+1\
+        x0=x1\
+        xk.append(x1)\
+    \
+    return x1,it,xk\
+\
+def newton_modified(fname,fpname,m,x0,tolx,tolf,nmax):\
+    xk=[]\
+    it=0\
+    errorex=1+tolx\
+    erroref=1+tolf\
+    \
+    while it < nmax and errorex >= tolx and erroref >= tolf:\
+        fx0=fname(x0)\
+        if abs(fpname(x0)) <= np.spacing(1): #If the first derivative is smaller than machine precision, stop\
+            print(" first derivative is zero in x0")\
+            return None, None,None\
+        d=fx0 / fpname(x0)\
+\
+        x1=x0 - m*d #m is the multiplicity of the zero\
+        fx1=fname(x1)\
+        erroref=np.abs(fx1)\
+        if x1!=0:\
+            errorex=np.abs(x0 - x1) / np.abs(x0)\
+        else:\
+            errorex=np.abs(x0 - x1) \
+\
+        it=it+1\
+        x0=x1\
+        xk.append(x1)\
+    \
+    return x1,it,xk\
+    \
+def secants(fname,xm1,x0,tolx,tolf,nmax):\
+        xk=[]\
+        it=0\
+        errorex=1+tolx\
+        erroref=1+tolf\
+\
+        while it < nmax and errorex >= tolx and erroref >= tolf:\
+            fxm1=fname(xm1)\
+            fx0=fname(x0) \
+            d=fx0*(x0-xm1)/(fx0-fxm1)\
+\
+            x1= x0 - d\
+          \
+            \
+            fx1=fname(x1)\
+            xk.append(x1);\
+            if x1!=0:\
+                errorex = np.abs(x1 - x0) / np.abs(x0)\
+            else:\
+                errorex = np.abs(x1 - x0)\
+                \
+            erroref=np.abs(fx1)\
+            xm1=x0\
+            x0=x1\
+            \
+            it=it+1;\
+           \
+       \
+        if it==nmax:\
+           print('Secants: maximum number of iterations reached \\n')\
+        \
+        return x1,it,xk\
+    \
+def order_estimation(xk,iterations):\
+     #See attached handout for explanation\
+\
+      k=iterations-4\
+      p=np.log(abs(xk[k+2]-xk[k+3])/abs(xk[k+1]-xk[k+2]))/np.log(abs(xk[k+1]-xk[k+2])/abs(xk[k]-xk[k+1]));\
+     \
+      order=p\
+      return order\
+\
+\
+#Solution of systems of non-linear equations\
+def newton_raphson(initial_guess, F_numerical, J_Numerical, tolX, tolF, max_iterations):\
+    X= np.array(initial_guess, dtype=float)\
+    it=0\
+    errorF=1+tolF\
+    errorX=1+tolX\
+    error=[]\
+    \
+    while errorX >= tolX and errorF >= tolF and it < max_iterations:\
+        jx = J_Numerical(X[0], X[1])\
+        if np.linalg.det(jx) == 0:\
+            print("The Jacobian matrix calculated in the previous iterate is not full rank")\
+            return None, None,None\
+        \
+        fx = F_numerical(X[0], X[1])\
+        fx = fx.squeeze() \
+        s = np.linalg.solve(jx, -fx)\
+        Xnew=X+s\
+        \
+        normaXnew=np.linalg.norm(Xnew,1)\
+        if normaXnew !=0:\
+            errorX=np.linalg.norm(s)/normaXnew\
+        else:\
+            errorX=np.linalg.norm(s)\
+        \
+        error.append(errorX)\
+        fxnew=F_numerical(Xnew[0], Xnew[1])\
+        errorF= np.linalg.norm(fxnew.squeeze(),1)\
+        X=Xnew\
+        it=it+1\
+    \
+    return X,it,error\
+\
+def newton_raphson_chords(initial_guess, F_numerical, J_Numerical, tolX, tolF, max_iterations):\
+    X= np.array(initial_guess, dtype=float)\
+    it=0\
+    errorF=1+tolF\
+    errorX=1+tolX\
+    error=[]\
+    \
+    while errorX >= tolX and errorF >= tolF and it < max_iterations:\
+        if it == 0:\
+            jx = J_Numerical(X[0], X[1])\
+            if np.linalg.det(jx) == 0:\
+                print("The Jacobian matrix calculated in the previous iterate is not full rank")\
+                return None, None,None\
+        \
+        fx = F_numerical(X[0], X[1])\
+        fx = fx.squeeze() \
+        s = np.linalg.solve(jx, -fx)\
+        Xnew=X+s\
+        \
+        normaXnew=np.linalg.norm(Xnew,1)\
+        if normaXnew !=0:\
+            errorX=np.linalg.norm(s)/normaXnew\
+        else:\
+            errorX=np.linalg.norm(s)\
+            \
+        error.append(errorX)\
+        fxnew=F_numerical(Xnew[0], Xnew[1])\
+        errorF= np.linalg.norm(fxnew.squeeze(),1)\
+        X=Xnew\
+        it=it+1\
+    \
+    return X,it,error\
+\
+def newton_raphson_sham(initial_guess, update, F_numerical, J_Numerical, tolX, tolF, max_iterations):\
+    X= np.array(initial_guess, dtype=float)\
+    it=0\
+    errorF=1+tolF\
+    errorX=1+tolX\
+    error=[]\
+    \
+    while errorX >= tolX and errorF >= tolF and it < max_iterations:\
+        if it % update == 0:\
+            jx = J_Numerical(X[0], X[1])\
+            if np.linalg.det(jx) == 0:\
+                print("The Jacobian matrix calculated in the previous iterate is not full rank")\
+                return None, None,None\
+        \
+        fx = F_numerical(X[0], X[1])\
+        fx = fx.squeeze() \
+        s = np.linalg.solve(jx, -fx)\
+        Xnew=X+s\
+        \
+        normaXnew=np.linalg.norm(Xnew,1)\
+        if normaXnew !=0:\
+            errorX=np.linalg.norm(s)/normaXnew\
+        else:\
+            errorX=np.linalg.norm(s)\
+            \
+        error.append(errorX)\
+        fxnew=F_numerical(Xnew[0], Xnew[1])\
+        errorF= np.linalg.norm(fxnew.squeeze(),1)\
+        X=Xnew\
+        it=it+1\
+    \
+    return X,it,error\
+\
+def newton_raphson_minimum(initial_guess, grad_func, Hessian_func, tolX, tolF, max_iterations):\
+    X= np.array(initial_guess, dtype=float)\
+    it=0\
+    errorF=1+tolF\
+    errorX=1+tolX\
+    error=[]\
+    \
+    while errorX >= tolX and errorF >= tolF and it < max_iterations:\
+        \
+        Hx = Hessian_func(X[0], X[1])\
+        if np.linalg.det(Hx) == 0:\
+            print("The Hessian matrix calculated in the previous iterate is not full rank")\
+            return None, None,None\
+        \
+        grad = grad_func(X[0], X[1])\
+        grad = grad.squeeze() \
+        s = np.linalg.solve(Hx, -grad)\
+        Xnew=X+s\
+        \
+        normaXnew=np.linalg.norm(Xnew,1)\
+        if normaXnew !=0:\
+            errorX=np.linalg.norm(s)/normaXnew\
+        else:\
+            errorX=np.linalg.norm(s)\
+            \
+        error.append(errorX)\
+        grad_new=grad_func(Xnew[0], Xnew[1])\
+        errorF= np.linalg.norm(grad_new.squeeze(),1)\
+        X=Xnew\
+        it=it+1\
+    \
+    return X,it,error\
+    \
+\
+def jacobi(A,b,x0,toll,it_max):\
+    error=1000\
+    d=np.diag(A)\
+    n=A.shape[0]\
+    invM=np.diag(1/d)\
+    E=np.tril(A, -1)\
+    F=np.triu(A, 1)\
+    N= -(E + F)\
+    T=invM @ N\
+    autovalori=np.linalg.eigvals(T)\
+    raggiospettrale=np.max(np.abs(autovalori))\
+    print("spectral radius jacobi", raggiospettrale)\
+    it=0\
+    \
+    er_vet=[]\
+    while it<=it_max and error>=toll:\
+        x = (b + N@x0) / d.reshape(n, 1)\
+        error = np.linalg.norm(x - x0) / np.linalg.norm(x)\
+        er_vet.append(error)\
+        x0=x.copy()\
+        it=it+1\
+    return x,it,er_vet\
+     \
+def gauss_seidel(A,b,x0,toll,it_max):\
+    error=1000\
+    d=np.diag(A)\
+    D=np.diag(d)\
+    E=np.tril(A, -1)\
+    F=np.triu(A, 1)\
+    M= E + D\
+    N= -F\
+    T= np.linalg.inv(M) @ N\
+    autovalori=np.linalg.eigvals(T)\
+    raggiospettrale=np.max(np.abs(autovalori))\
+    print("spectral radius Gauss-Seidel ",raggiospettrale)\
+    it=0\
+    er_vet=[]\
+    while error >= toll and it < it_max:\
+        temp = N@x0 + b\
+        x, flag = Lsolve(M, temp)\
+        error=np.linalg.norm(x - x0) / np.linalg.norm(x) # type: ignore\
+        er_vet.append(error)\
+        x0=x.copy()\
+        it=it+1\
+    return x,it,er_vet\
+\
+def gauss_seidel_sor(A,b,x0,toll,it_max,omega):\
+    error=1000\
+    d=np.diag(A) \
+    D=np.diag(d)\
+    E= np.tril(A, -1)\
+    F= np.triu(A, 1)\
+    Momega=D+omega*E\
+    Nomega=(1-omega)*D-omega*F\
+    T=np.linalg.inv(Momega) @ Nomega\
+    autovalori=np.linalg.eigvals(T)\
+    raggiospettrale=np.max(np.abs(autovalori))\
+    print("spectral radius Gauss-Seidel SOR ", raggiospettrale)\
+    \
+    M= D + E\
+    N= -F\
+    it=0\
+    xold=x0.copy()\
+    xnew=x0.copy()\
+    er_vet=[]\
+\
+    while it<=it_max and error>=toll:\
+        temp = N@xold + b\
+        xtilde, flag = Lsolve(M, temp)\
+        xnew = (1 - omega)*xold + omega*xtilde\
+        error = np.linalg.norm(xnew - xold) / np.linalg.norm(xnew)\
+        er_vet.append(error)\
+        xold=xnew.copy()\
+        it=it+1\
+    return xnew,it,er_vet\
+\
+\
+#Descent methods\
+\
+def steepest_descent(A,b,x0,itmax,tol):\
+    n,m=A.shape\
+    if n!=m:\
+        print("Matrix not square")\
+        return [],[]\
+   # initialize the necessary variables\
+    x = x0\
+    r = A@x0 - b\
+    p = -r \
+    it = 0\
+    nb=np.linalg.norm(b)\
+    error=np.linalg.norm(r)/nb\
+    vec_sol=[]\
+    vec_sol.append(x.copy())\
+    vet_r=[]\
+    vet_r.append(error)\
+     \
+    # use the gradient method to find the solution\
+    while error >= tol and it < itmax:\
+        it=it+1\
+        Ap= A @ p\
+        alpha = -(r.T @ p) / (p.T @ Ap)\
+        x = x + alpha*p#update the solution in the opposite direction of the gradient: alpha tells me where to stop \
+        #in the direction of the gradient so that F(xk+t p ) <F(xk)\
+    \
+        vec_sol.append(x.copy())\
+        r = r + alpha*Ap\
+        error=np.linalg.norm(r)/nb\
+        vet_r.append(error)\
+        p = -r\
+        \
+    iterates_array = np.vstack([arr.T for arr in vec_sol])\
+    return x,vet_r,iterates_array,it\
+\
+def conjugate_gradient(A,b,x0,itmax,tol):\
+    n,m=A.shape\
+    if n!=m:\
+        print("Matrix not square")\
+        return [],[]\
+    \
+    # initialize the necessary variables\
+    x = x0\
+    r = A@x0 - b\
+    p = -r\
+    it = 0\
+    nb=np.linalg.norm(b)\
+    error=np.linalg.norm(r)/nb\
+    vec_sol=[]\
+    vec_sol.append(x0.copy())\
+    vet_r=[]\
+    vet_r.append(error)\
+    # use the conjugate gradient method to calculate the solution\
+    while error >= tol and it < itmax:\
+        it=it+1\
+        Ap = A.dot(p)\
+        alpha = - (r.T @ p) / (p.T @ Ap)\
+        x = x + alpha*p\
+        vec_sol.append(x.copy())\
+        rtr_old= r.T @ r\
+        r = r + alpha*Ap\
+        gamma= (r.T @ r) / rtr_old\
+        error=np.linalg.norm(r)/nb\
+        vet_r.append(error)\
+        p = -r + gamma*p#The new direction belongs to the plane identified by -r and p. gamma is chosen in such a way that the new direction\
+        #is conjugated with respect to the previous direction (which geometrically means that it points towards the center)\
+   \
+    iterates_array = np.vstack([arr.T for arr in vec_sol])\
+    return x,vet_r,iterates_array,it\
+\
+#Solution of overdetermined systems\
+\
+def eqnorm(A,b):\
+    G = A.T @ A\
+    f = A.T @ b\
+\
+    L = sp.linalg.cholesky(G, lower=True)\
+    U = L.T\
+\
+    y, flag = Lsolve(L, f)\
+    x, flag = Usolve(U, y)\
+    \
+    return x\
+\
+\
+def qrLS(A,b):\
+    n = A.shape[1]  # number of columns of A\
+    Q,R = sp.linalg.qr(A)\
+    h = Q.T @ b\
+    x,_ = Usolve(R[:n, :n], h[:n])\
+    residue= np.linalg.norm(h[n:], 2)**2\
+    return x,residue\
+\
+\
+def SVDLS(A,b):\
+    m,n = A.shape  #number of rows and number of columns of A\
+    U,s,VT=sp.linalg.svd(A)  \
+    \
+    V = VT.T\
+    thresh = np.spacing(1)*m*s[0] ##Calculation of the rank of the matrix, number of singular values greater than a threshold\
+    k = np.count_nonzero(s>thresh)\
+    \
+    d = U.T @ b\
+    d1 = d[:k].reshape(k,1)\
+    s1 = s[:k].reshape(k,1)\
+    \
+    c=d1/s1\
+    x = V[:, :k] @ c\
+    residue= np.linalg.norm(d[k:], 2)**2\
+    return x,residue\
+     \
+\
+#-----------Interpolation\
+\
+def plagr(xnodes,j):\
+    xzeri = np.zeros_like(xnodes)\
+    n=  xnodes.size\
+    if j==0:\
+       xzeri = xnodes[1:]\
+    else:\
+       xzeri=np.append(xnodes[:j], xnodes[j+1:])\
+    \
+    num = np.poly(xzeri)\
+    den = np.polyval(num, xnodes[j])\
+    \
+    p = num / den\
+    \
+    return p\
+\
+\
+\
+def InterpL(x, y, xx):\
+    n = x.shape[0]\
+    m = xx.shape[0]\
+    L = np.zeros((m,n))\
+\
+    for j in range(n):\
+       p = plagr(x, j)\
+       L[:,j] = np.polyval(p, xx)\
+        \
+    return L @ y}
