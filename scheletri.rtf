@@ -1,0 +1,630 @@
+{\rtf1\ansi\ansicpg1252\cocoartf2820
+\cocoatextscaling0\cocoaplatform0{\fonttbl\f0\fnil\fcharset0 Menlo-Regular;}
+{\colortbl;\red255\green255\blue255;\red0\green0\blue0;\red255\green255\blue255;\red108\green113\blue123;
+\red156\green163\blue178;\red185\green94\blue214;\red221\green179\blue103;\red82\green159\blue236;\red214\green84\blue97;
+\red135\green185\blue101;\red197\green136\blue83;\red72\green169\blue182;\red255\green255\blue255;}
+{\*\expandedcolortbl;;\cssrgb\c0\c1\c1;\cssrgb\c100000\c100000\c99985\c0;\cssrgb\c49964\c51934\c55731;
+\cssrgb\c67272\c70030\c74960;\cssrgb\c78072\c47498\c86988;\cssrgb\c89652\c75075\c47792;\cssrgb\c38506\c69183\c94186;\cssrgb\c87702\c42145\c45463;
+\cssrgb\c59531\c76374\c47163;\cssrgb\c81841\c60205\c39608;\cssrgb\c33980\c71695\c76316;\cssrgb\c100000\c100000\c99971;}
+\paperw11900\paperh16840\margl1440\margr1440\vieww11520\viewh8400\viewkind0
+\deftab720
+\pard\pardeftab720\partightenfactor0
+
+\f0\fs24 \cf2 \cb3 \expnd0\expndtw0\kerning0
+\outl0\strokewidth0 \strokec4 #Zeri di funzione\cf2 \cb3 \strokec5 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec6 import\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec7 math\cf2 \cb3 \strokec5 \
+\cf2 \cb3 \strokec6 def\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec8 sign\cf2 \cb3 \strokec5 (\cf2 \cb3 \strokec9 x\cf2 \cb3 \strokec5 ):\
+  \cf2 \cb3 \strokec10 """\cf2 \cb3 \strokec5 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec10   Funzione segno che restituisce 1 se x \'e8 positivo, 0 se x \'e8 zero e -1 se x \'e8 negativo.\cf2 \cb3 \strokec5 \
+\cf2 \cb3 \strokec10   """\cf2 \cb3 \strokec5 \
+  \cf2 \cb3 \strokec6 return\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec7 math\cf2 \cb3 \strokec5 .\cf2 \cb3 \strokec8 copysign\cf2 \cb3 \strokec5 (\cf2 \cb3 \strokec11 1\cf2 \cb3 \strokec5 , \cf2 \cb3 \strokec9 x\cf2 \cb3 \strokec5 )\
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec6 def\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec8 metodo_bisezione\cf2 \cb3 \strokec5 (\cf2 \cb3 \strokec9 fname\cf2 \cb3 \strokec5 , \cf2 \cb3 \strokec9 a\cf2 \cb3 \strokec5 , \cf2 \cb3 \strokec9 b\cf2 \cb3 \strokec5 , \cf2 \cb3 \strokec9 tolx\cf2 \cb3 \strokec5 ):\
+ \
+ \cf2 \cb3 \strokec9 fa\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec9 fname\cf2 \cb3 \strokec5 (\cf2 \cb3 \strokec9 a\cf2 \cb3 \strokec5 )\
+ \cf2 \cb3 \strokec9 fb\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec9 fname\cf2 \cb3 \strokec5 (\cf2 \cb3 \strokec9 b\cf2 \cb3 \strokec5 )\
+ \cf2 \cb3 \strokec6 if\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec4 #to do\cf2 \cb3 \strokec5 \
+     \cf2 \cb3 \strokec8 print\cf2 \cb3 \strokec5 (\cf2 \cb3 \strokec10 "Non \'e8 possibile applicare il metodo di bisezione \cf2 \cb3 \strokec12 \\n\cf2 \cb3 \strokec10 "\cf2 \cb3 \strokec5 )\
+     \cf2 \cb3 \strokec6 return\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec11 None\cf2 \cb3 \strokec5 , \cf2 \cb3 \strokec11 None\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec11 None\cf2 \cb3 \strokec5 \
+\
+ \cf2 \cb3 \strokec9 it\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec11 0\cf2 \cb3 \strokec5 \
+ \cf2 \cb3 \strokec9 v_xk\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5  []\
+\
+ \
+ \
+ \cf2 \cb3 \strokec6 while\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec4 #to do\cf2 \cb3 \strokec5 \
+    \cf2 \cb3 \strokec9 xk\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec4 #to do\cf2 \cb3 \strokec5 \
+    \cf2 \cb3 \strokec9 v_xk\cf2 \cb3 \strokec5 .\cf2 \cb3 \strokec8 append\cf2 \cb3 \strokec5 (\cf2 \cb3 \strokec9 xk\cf2 \cb3 \strokec5 )\
+    \cf2 \cb3 \strokec9 it\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec12 +=\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec11 1\cf2 \cb3 \strokec5 \
+    \cf2 \cb3 \strokec9 fxk\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec9 fname\cf2 \cb3 \strokec5 (\cf2 \cb3 \strokec9 xk\cf2 \cb3 \strokec5 )\
+    \cf2 \cb3 \strokec6 if\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec9 fxk\cf2 \cb3 \strokec12 ==\cf2 \cb3 \strokec11 0\cf2 \cb3 \strokec5 :\
+      \cf2 \cb3 \strokec6 return\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec9 xk\cf2 \cb3 \strokec5 , \cf2 \cb3 \strokec9 it\cf2 \cb3 \strokec5 , \cf2 \cb3 \strokec9 v_xk\cf2 \cb3 \strokec5 \
+\
+    \cf2 \cb3 \strokec6 if\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec4 # to do\cf2 \cb3 \strokec5 \
+      \cf2 \cb3 \strokec9 a\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+      \cf2 \cb3 \strokec9 fa\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+    \cf2 \cb3 \strokec6 elif\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec4 # to do\cf2 \cb3 \strokec5 \
+      \cf2 \cb3 \strokec9 b\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 \
+      \cf2 \cb3 \strokec9 fb\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 \
+\
+ \
+ \cf2 \cb3 \strokec6 return\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec9 xk\cf2 \cb3 \strokec5 , \cf2 \cb3 \strokec9 it\cf2 \cb3 \strokec5 , \cf2 \cb3 \strokec9 v_xk\cf2 \cb3 \strokec5 \
+\
+\cf2 \cb3 \strokec6 def\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec8 falsa_posizione\cf2 \cb3 \strokec5 (\cf2 \cb3 \strokec9 fname\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec9 a\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec9 b\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec9 tolx\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec9 tolf\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec9 maxit\cf2 \cb3 \strokec5 ):\
+    \cf2 \cb3 \strokec9 fa\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec9 fname\cf2 \cb3 \strokec5 (\cf2 \cb3 \strokec9 a\cf2 \cb3 \strokec5 )\
+    \cf2 \cb3 \strokec9 fb\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec9 fname\cf2 \cb3 \strokec5 (\cf2 \cb3 \strokec9 b\cf2 \cb3 \strokec5 )\
+    \cf2 \cb3 \strokec6 if\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec4 #to do:\cf2 \cb3 \strokec5 \
+       \cf2 \cb3 \strokec8 print\cf2 \cb3 \strokec5 (\cf2 \cb3 \strokec10 "Metodo di bisezione non applicabile"\cf2 \cb3 \strokec5 )\
+       \cf2 \cb3 \strokec6 return\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec11 None\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec11 None\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec11 None\cf2 \cb3 \strokec5 \
+\
+    \cf2 \cb3 \strokec9 it\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec11 0\cf2 \cb3 \strokec5 \
+    \cf2 \cb3 \strokec9 v_xk\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 []\
+    \cf2 \cb3 \strokec9 fxk\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec11 1\cf2 \cb3 \strokec12 +\cf2 \cb3 \strokec9 tolf\cf2 \cb3 \strokec5 \
+    \cf2 \cb3 \strokec9 errore\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec11 1\cf2 \cb3 \strokec12 +\cf2 \cb3 \strokec9 tolx\cf2 \cb3 \strokec5 \
+    \cf2 \cb3 \strokec9 xprec\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec9 a\cf2 \cb3 \strokec5 \
+    \cf2 \cb3 \strokec6 while\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec4 #to do:\cf2 \cb3 \strokec5 \
+        \cf2 \cb3 \strokec9 xk\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec4 #to do\cf2 \cb3 \strokec5 \
+        \cf2 \cb3 \strokec9 v_xk\cf2 \cb3 \strokec5 .\cf2 \cb3 \strokec8 append\cf2 \cb3 \strokec5 (\cf2 \cb3 \strokec9 xk\cf2 \cb3 \strokec5 )\
+        \cf2 \cb3 \strokec9 it\cf2 \cb3 \strokec12 +=\cf2 \cb3 \strokec11 1\cf2 \cb3 \strokec5 \
+        \cf2 \cb3 \strokec9 fxk\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 # to do\cf2 \cb3 \strokec5 \
+        \cf2 \cb3 \strokec6 if\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec9 fxk\cf2 \cb3 \strokec12 ==\cf2 \cb3 \strokec11 0\cf2 \cb3 \strokec5 :\
+            \cf2 \cb3 \strokec6 return\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec9 xk\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec9 it\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec9 v_xk\cf2 \cb3 \strokec5 \
+\
+        \cf2 \cb3 \strokec6 if\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec4 #to do\cf2 \cb3 \strokec5 \
+           \cf2 \cb3 \strokec9 b\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec4 #to do\cf2 \cb3 \strokec5 \
+           \cf2 \cb3 \strokec9 fb\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec4 #to do\cf2 \cb3 \strokec5 \
+        \cf2 \cb3 \strokec6 elif\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+           \cf2 \cb3 \strokec9 a\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do\cf2 \cb3 \strokec5 \
+           \cf2 \cb3 \strokec9 fa\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do\cf2 \cb3 \strokec5 \
+        \cf2 \cb3 \strokec6 if\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec9 xk\cf2 \cb3 \strokec12 !=\cf2 \cb3 \strokec11 0\cf2 \cb3 \strokec5 :\
+            \cf2 \cb3 \strokec9 errore\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec4 #to do\cf2 \cb3 \strokec5 \
+        \cf2 \cb3 \strokec6 else\cf2 \cb3 \strokec5 :\
+            \cf2 \cb3 \strokec9 errore\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+        \cf2 \cb3 \strokec9 xprec\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec9 xk\cf2 \cb3 \strokec5 \
+    \cf2 \cb3 \strokec6 return\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec9 xk\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec9 it\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec9 v_xk\cf2 \cb3 \strokec5 \
+\
+\cf2 \cb3 \strokec6 def\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec8 corde\cf2 \cb3 \strokec5 (\cf2 \cb3 \strokec9 fname\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec9 coeff_ang\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec9 x0\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec9 tolx\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec9 tolf\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec9 nmax\cf2 \cb3 \strokec5 ):\
+    \
+     \cf2 \cb3 \strokec4 # coeff_ang \'e8 il coefficiente angolare della retta che rimane fisso per tutte le iterazioni\cf2 \cb3 \strokec5 \
+        \cf2 \cb3 \strokec9 xk\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 []\
+        \
+        \cf2 \cb3 \strokec9 it\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec11 0\cf2 \cb3 \strokec5 \
+        \cf2 \cb3 \strokec9 errorex\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec11 1\cf2 \cb3 \strokec12 +\cf2 \cb3 \strokec9 tolx\cf2 \cb3 \strokec5 \
+        \cf2 \cb3 \strokec9 erroref\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec11 1\cf2 \cb3 \strokec12 +\cf2 \cb3 \strokec9 tolf\cf2 \cb3 \strokec5 \
+        \cf2 \cb3 \strokec6 while\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec4 #to do\cf2 \cb3 \strokec5 \
+           \
+           \cf2 \cb3 \strokec9 fx0\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 # to do\cf2 \cb3 \strokec5 \
+           \cf2 \cb3 \strokec9 d\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 # to do\cf2 \cb3 \strokec5 \
+          \
+           \cf2 \cb3 \strokec9 x1\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do\cf2 \cb3 \strokec5 \
+           \cf2 \cb3 \strokec9 fx1\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #\cf2 \cb3 \strokec5 \
+           \cf2 \cb3 \strokec6 if\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec9 x1\cf2 \cb3 \strokec12 !=\cf2 \cb3 \strokec11 0\cf2 \cb3 \strokec5 :\
+                \cf2 \cb3 \strokec9 errorex\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+           \cf2 \cb3 \strokec6 else\cf2 \cb3 \strokec5 :\
+                \cf2 \cb3 \strokec9 errorex\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do\cf2 \cb3 \strokec5 \
+           \
+           \cf2 \cb3 \strokec9 erroref\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do\cf2 \cb3 \strokec5 \
+           \
+           \cf2 \cb3 \strokec9 x0\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec9 x1\cf2 \cb3 \strokec5 \
+           \cf2 \cb3 \strokec9 it\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec9 it\cf2 \cb3 \strokec12 +\cf2 \cb3 \strokec11 1\cf2 \cb3 \strokec5 \
+           \cf2 \cb3 \strokec9 xk\cf2 \cb3 \strokec5 .\cf2 \cb3 \strokec8 append\cf2 \cb3 \strokec5 (\cf2 \cb3 \strokec9 x1\cf2 \cb3 \strokec5 )\
+          \
+        \cf2 \cb3 \strokec6 if\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec9 it\cf2 \cb3 \strokec12 ==\cf2 \cb3 \strokec9 nmax\cf2 \cb3 \strokec5 :\
+            \cf2 \cb3 \strokec8 print\cf2 \cb3 \strokec5 (\cf2 \cb3 \strokec10 'Corde : raggiunto massimo numero di iterazioni \cf2 \cb3 \strokec12 \\n\cf2 \cb3 \strokec10 '\cf2 \cb3 \strokec5 )\
+            \
+        \
+        \cf2 \cb3 \strokec6 return\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec9 x1\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec9 it\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec9 xk\cf2 \cb3 \strokec5 \
+    \
+\cf2 \cb3 \strokec6 def\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec8 newton\cf2 \cb3 \strokec5 (\cf2 \cb3 \strokec9 fname\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec9 fpname\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec9 x0\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec9 tolx\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec9 tolf\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec9 nmax\cf2 \cb3 \strokec5 ):\
+  \
+        \cf2 \cb3 \strokec9 xk\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 []\
+       \
+        \cf2 \cb3 \strokec9 it\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec11 0\cf2 \cb3 \strokec5 \
+        \cf2 \cb3 \strokec9 errorex\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec11 1\cf2 \cb3 \strokec12 +\cf2 \cb3 \strokec9 tolx\cf2 \cb3 \strokec5 \
+        \cf2 \cb3 \strokec9 erroref\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec11 1\cf2 \cb3 \strokec12 +\cf2 \cb3 \strokec9 tolf\cf2 \cb3 \strokec5 \
+        \cf2 \cb3 \strokec6 while\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec4 #to do\cf2 \cb3 \strokec5 \
+           \
+           \cf2 \cb3 \strokec9 fx0\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec9 fname\cf2 \cb3 \strokec5 (\cf2 \cb3 \strokec9 x0\cf2 \cb3 \strokec5 )\
+           \cf2 \cb3 \strokec6 if\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec4 #to do\cf2 \cb3 \strokec5 \
+                \cf2 \cb3 \strokec8 print\cf2 \cb3 \strokec5 (\cf2 \cb3 \strokec10 " derivata prima nulla in x0"\cf2 \cb3 \strokec5 )\
+                \cf2 \cb3 \strokec6 return\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec11 None\cf2 \cb3 \strokec5 , \cf2 \cb3 \strokec11 None\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec11 None\cf2 \cb3 \strokec5 \
+           \cf2 \cb3 \strokec9 d\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+\
+           \cf2 \cb3 \strokec9 x1\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do\cf2 \cb3 \strokec5 \
+           \cf2 \cb3 \strokec9 fx1\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec9 fname\cf2 \cb3 \strokec5 (\cf2 \cb3 \strokec9 x1\cf2 \cb3 \strokec5 )\
+           \cf2 \cb3 \strokec9 erroref\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 np.\cf2 \cb3 \strokec8 abs\cf2 \cb3 \strokec5 (\cf2 \cb3 \strokec9 fx1\cf2 \cb3 \strokec5 )\
+           \cf2 \cb3 \strokec6 if\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec9 x1\cf2 \cb3 \strokec12 !=\cf2 \cb3 \strokec11 0\cf2 \cb3 \strokec5 :\
+                \cf2 \cb3 \strokec9 errore\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do\cf2 \cb3 \strokec5 \
+           \cf2 \cb3 \strokec6 else\cf2 \cb3 \strokec5 :\
+                \cf2 \cb3 \strokec9 errore\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+\
+           \cf2 \cb3 \strokec9 it\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec9 it\cf2 \cb3 \strokec12 +\cf2 \cb3 \strokec11 1\cf2 \cb3 \strokec5 \
+           \cf2 \cb3 \strokec9 x0\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec9 x1\cf2 \cb3 \strokec5 \
+           \cf2 \cb3 \strokec9 xk\cf2 \cb3 \strokec5 .\cf2 \cb3 \strokec8 append\cf2 \cb3 \strokec5 (\cf2 \cb3 \strokec9 x1\cf2 \cb3 \strokec5 )\
+          \
+        \cf2 \cb3 \strokec6 if\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec9 it\cf2 \cb3 \strokec12 ==\cf2 \cb3 \strokec9 nmax\cf2 \cb3 \strokec5 :\
+            \cf2 \cb3 \strokec8 print\cf2 \cb3 \strokec5 (\cf2 \cb3 \strokec10 'Newton: raggiunto massimo numero di iterazioni \cf2 \cb3 \strokec12 \\n\cf2 \cb3 \strokec10 '\cf2 \cb3 \strokec5 )\
+            \
+        \
+        \cf2 \cb3 \strokec6 return\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec9 x1\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec9 it\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec9 xk\cf2 \cb3 \strokec5 \
+\
+\cf2 \cb3 \strokec6 def\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec8 newton_modificato\cf2 \cb3 \strokec5 (\cf2 \cb3 \strokec9 fname\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec9 fpname\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec9 m\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec9 x0\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec9 tolx\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec9 tolf\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec9 nmax\cf2 \cb3 \strokec5 ):\
+  \
+        \cf2 \cb3 \strokec4 #m \'e8 la molteplicit\'e0 dello zero\cf2 \cb3 \strokec5 \
+    \
+         \cf2 \cb3 \strokec9 xk\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 []\
+       \
+        \cf2 \cb3 \strokec9 it\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec11 0\cf2 \cb3 \strokec5 \
+        \cf2 \cb3 \strokec9 errorex\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec11 1\cf2 \cb3 \strokec12 +\cf2 \cb3 \strokec5 tolx\
+        \cf2 \cb3 \strokec9 erroref\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec11 1\cf2 \cb3 \strokec12 +\cf2 \cb3 \strokec5 tolf\
+        \cf2 \cb3 \strokec6 while\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec4 #to do\cf2 \cb3 \strokec5 \
+           \
+           \cf2 \cb3 \strokec9 fx0\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec8 fname\cf2 \cb3 \strokec5 (\cf2 \cb3 \strokec9 x0\cf2 \cb3 \strokec5 )\
+           \cf2 \cb3 \strokec6 if\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec4 #to do\cf2 \cb3 \strokec5 \
+                \cf2 \cb3 \strokec8 print\cf2 \cb3 \strokec5 (\cf2 \cb3 \strokec10 " derivata prima nulla in x0"\cf2 \cb3 \strokec5 )\
+                \cf2 \cb3 \strokec6 return\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec11 None\cf2 \cb3 \strokec5 , \cf2 \cb3 \strokec11 None\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec11 None\cf2 \cb3 \strokec5 \
+           \cf2 \cb3 \strokec9 d\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+\
+           \cf2 \cb3 \strokec9 x1\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do\cf2 \cb3 \strokec5 \
+           \cf2 \cb3 \strokec9 fx1\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec8 fname\cf2 \cb3 \strokec5 (\cf2 \cb3 \strokec9 x1\cf2 \cb3 \strokec5 )\
+           \cf2 \cb3 \strokec9 erroref\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 np.\cf2 \cb3 \strokec8 abs\cf2 \cb3 \strokec5 (\cf2 \cb3 \strokec9 fx1\cf2 \cb3 \strokec5 )\
+           \cf2 \cb3 \strokec6 if\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec9 x1\cf2 \cb3 \strokec12 !=\cf2 \cb3 \strokec11 0\cf2 \cb3 \strokec5 :\
+                \cf2 \cb3 \strokec9 errore\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do\cf2 \cb3 \strokec5 \
+           \cf2 \cb3 \strokec6 else\cf2 \cb3 \strokec5 :\
+                \cf2 \cb3 \strokec9 errore\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+\
+           \cf2 \cb3 \strokec9 it\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec9 it\cf2 \cb3 \strokec12 +\cf2 \cb3 \strokec11 1\cf2 \cb3 \strokec5 \
+           \cf2 \cb3 \strokec9 x0\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec9 x1\cf2 \cb3 \strokec5 \
+           xk.\cf2 \cb3 \strokec8 append\cf2 \cb3 \strokec5 (\cf2 \cb3 \strokec9 x1\cf2 \cb3 \strokec5 )\
+          \
+        \cf2 \cb3 \strokec6 if\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec9 it\cf2 \cb3 \strokec12 ==\cf2 \cb3 \strokec5 nmax:\
+            \cf2 \cb3 \strokec8 print\cf2 \cb3 \strokec5 (\cf2 \cb3 \strokec10 'Newton modificato: raggiunto massimo numero di iterazioni \cf2 \cb3 \strokec12 \\n\cf2 \cb3 \strokec10 '\cf2 \cb3 \strokec5 )\
+            \
+        \
+        \cf2 \cb3 \strokec6 return\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec9 x1\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec9 it\cf2 \cb3 \strokec5 ,xk\
+    \
+\cf2 \cb3 \strokec6 def\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec8 secanti\cf2 \cb3 \strokec5 (\cf2 \cb3 \strokec11 fname\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec11 xm1\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec11 x0\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec11 tolx\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec11 tolf\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec11 nmax\cf2 \cb3 \strokec5 ):\
+        xk\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 []\
+        \
+        it\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec11 0\cf2 \cb3 \strokec5 \
+        errorex\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec11 1\cf2 \cb3 \strokec12 +\cf2 \cb3 \strokec5 tolx\
+        erroref\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec11 1\cf2 \cb3 \strokec12 +\cf2 \cb3 \strokec5 tolf\
+        \cf2 \cb3 \strokec6 while\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec4 #to do\cf2 \cb3 \strokec5 \
+            \
+            fxm1\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do\cf2 \cb3 \strokec5 \
+            fx0\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+            d\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+\
+            x1\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+          \
+            \
+            fx1\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec8 fname\cf2 \cb3 \strokec5 (x1)\
+            xk.\cf2 \cb3 \strokec8 append\cf2 \cb3 \strokec5 (x1)\cf2 \cb3 \strokec13 ;\cf2 \cb3 \strokec5 \
+            \cf2 \cb3 \strokec6 if\cf2 \cb3 \strokec5  x1\cf2 \cb3 \strokec12 !=\cf2 \cb3 \strokec11 0\cf2 \cb3 \strokec5 :\
+                errorex\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+            \cf2 \cb3 \strokec6 else\cf2 \cb3 \strokec5 :\
+                errorex\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do\cf2 \cb3 \strokec5 \
+                \
+            erroref\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+            xm1\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+            x0\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do\cf2 \cb3 \strokec5 \
+            \
+            it\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 it\cf2 \cb3 \strokec12 +\cf2 \cb3 \strokec11 1\cf2 \cb3 \strokec13 ;\cf2 \cb3 \strokec5 \
+           \
+       \
+        \cf2 \cb3 \strokec6 if\cf2 \cb3 \strokec5  it\cf2 \cb3 \strokec12 ==\cf2 \cb3 \strokec5 nmax:\
+           \cf2 \cb3 \strokec12 print\cf2 \cb3 \strokec5 (\cf2 \cb3 \strokec10 'Secanti: raggiunto massimo numero di iterazioni \cf2 \cb3 \strokec12 \\n\cf2 \cb3 \strokec10 '\cf2 \cb3 \strokec5 )\
+        \
+        \cf2 \cb3 \strokec6 return\cf2 \cb3 \strokec5  x1,it,xk\
+    \
+\cf2 \cb3 \strokec6 def\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec8 stima_ordine\cf2 \cb3 \strokec5 (\cf2 \cb3 \strokec11 xk\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec11 iterazioni\cf2 \cb3 \strokec5 ):\
+     \cf2 \cb3 \strokec4 #Vedi dispensa allegata per la spiegazione\cf2 \cb3 \strokec5 \
+\
+      k\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 iterazioni\cf2 \cb3 \strokec12 -\cf2 \cb3 \strokec11 4\cf2 \cb3 \strokec5 \
+      p\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 np.\cf2 \cb3 \strokec8 log\cf2 \cb3 \strokec5 (\cf2 \cb3 \strokec12 abs\cf2 \cb3 \strokec5 (xk[k\cf2 \cb3 \strokec12 +\cf2 \cb3 \strokec11 2\cf2 \cb3 \strokec5 ]\cf2 \cb3 \strokec12 -\cf2 \cb3 \strokec5 xk[k\cf2 \cb3 \strokec12 +\cf2 \cb3 \strokec11 3\cf2 \cb3 \strokec5 ])\cf2 \cb3 \strokec12 /abs\cf2 \cb3 \strokec5 (xk[k\cf2 \cb3 \strokec12 +\cf2 \cb3 \strokec11 1\cf2 \cb3 \strokec5 ]\cf2 \cb3 \strokec12 -\cf2 \cb3 \strokec5 xk[k\cf2 \cb3 \strokec12 +\cf2 \cb3 \strokec11 2\cf2 \cb3 \strokec5 ]))\cf2 \cb3 \strokec12 /\cf2 \cb3 \strokec5 np.\cf2 \cb3 \strokec8 log\cf2 \cb3 \strokec5 (\cf2 \cb3 \strokec12 abs\cf2 \cb3 \strokec5 (xk[k\cf2 \cb3 \strokec12 +\cf2 \cb3 \strokec11 1\cf2 \cb3 \strokec5 ]\cf2 \cb3 \strokec12 -\cf2 \cb3 \strokec5 xk[k\cf2 \cb3 \strokec12 +\cf2 \cb3 \strokec11 2\cf2 \cb3 \strokec5 ])\cf2 \cb3 \strokec12 /abs\cf2 \cb3 \strokec5 (xk[k]\cf2 \cb3 \strokec12 -\cf2 \cb3 \strokec5 xk[k\cf2 \cb3 \strokec12 +\cf2 \cb3 \strokec11 1\cf2 \cb3 \strokec5 ]))\cf2 \cb3 \strokec13 ;\cf2 \cb3 \strokec5 \
+     \
+      ordine\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 p\
+      \cf2 \cb3 \strokec6 return\cf2 \cb3 \strokec5  ordine\
+\
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec4 #Soluzione di sistemi di equazioni non lineari\cf2 \cb3 \strokec5 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec6 def\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec8 newton_raphson\cf2 \cb3 \strokec5 (\cf2 \cb3 \strokec11 initial_guess\cf2 \cb3 \strokec5 , \cf2 \cb3 \strokec11 F_numerical\cf2 \cb3 \strokec5 , \cf2 \cb3 \strokec11 J_Numerical\cf2 \cb3 \strokec5 , \cf2 \cb3 \strokec11 tolX\cf2 \cb3 \strokec5 , \cf2 \cb3 \strokec11 tolF\cf2 \cb3 \strokec5 , \cf2 \cb3 \strokec11 max_iterations\cf2 \cb3 \strokec5 ):\
+    \
+\
+    X\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5  np.\cf2 \cb3 \strokec8 array\cf2 \cb3 \strokec5 (initial_guess, \cf2 \cb3 \strokec9 dtype\cf2 \cb3 \strokec12 =float\cf2 \cb3 \strokec5 )\
+    \
+   \
+\
+    it\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec11 0\cf2 \cb3 \strokec5 \
+    \
+    erroreF\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec11 1\cf2 \cb3 \strokec12 +\cf2 \cb3 \strokec5 tolF\
+    erroreX\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec11 1\cf2 \cb3 \strokec12 +\cf2 \cb3 \strokec5 tolX\
+    \
+    errore\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 []\
+    \
+    \cf2 \cb3 \strokec6 while\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec4 #to do\cf2 \cb3 \strokec5 \
+        \
+        jx \cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec4 #to do\cf2 \cb3 \strokec5 \
+        \
+        \cf2 \cb3 \strokec6 if\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec4 #to do\cf2 \cb3 \strokec5 \
+            \cf2 \cb3 \strokec12 print\cf2 \cb3 \strokec5 (\cf2 \cb3 \strokec10 "La matrice dello Jacobiano calcolata nell'iterato precedente non \'e8 a rango massimo"\cf2 \cb3 \strokec5 )\
+            \cf2 \cb3 \strokec6 return\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec11 None\cf2 \cb3 \strokec5 , \cf2 \cb3 \strokec11 None\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec11 None\cf2 \cb3 \strokec5 \
+        \
+        fx \cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec4 #To do\cf2 \cb3 \strokec5 \
+        fx \cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5  fx.\cf2 \cb3 \strokec8 squeeze\cf2 \cb3 \strokec5 () \
+        \
+        s \cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+        \
+        Xnew\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do\cf2 \cb3 \strokec5 \
+        \
+        normaXnew\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 np.linalg.\cf2 \cb3 \strokec8 norm\cf2 \cb3 \strokec5 (Xnew,\cf2 \cb3 \strokec11 1\cf2 \cb3 \strokec5 )\
+        \cf2 \cb3 \strokec6 if\cf2 \cb3 \strokec5  normaXnew \cf2 \cb3 \strokec12 !=\cf2 \cb3 \strokec11 0\cf2 \cb3 \strokec5 :\
+            erroreX\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+        \cf2 \cb3 \strokec6 else\cf2 \cb3 \strokec5 :\
+            erroreX\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+        \
+        errore.\cf2 \cb3 \strokec8 append\cf2 \cb3 \strokec5 (erroreX)\
+        fxnew\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do\cf2 \cb3 \strokec5 \
+        erroreF\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5  np.linalg.\cf2 \cb3 \strokec8 norm\cf2 \cb3 \strokec5 (fxnew.\cf2 \cb3 \strokec8 squeeze\cf2 \cb3 \strokec5 (),\cf2 \cb3 \strokec11 1\cf2 \cb3 \strokec5 )\
+        X\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 Xnew\
+        it\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 it\cf2 \cb3 \strokec12 +\cf2 \cb3 \strokec11 1\cf2 \cb3 \strokec5 \
+    \
+    \cf2 \cb3 \strokec6 return\cf2 \cb3 \strokec5  X,it,errore\
+\
+\cf2 \cb3 \strokec6 def\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec6 def\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec8 newton_raphson_corde\cf2 \cb3 \strokec5 (\cf2 \cb3 \strokec11 initial_guess\cf2 \cb3 \strokec5 , \cf2 \cb3 \strokec11 F_numerical\cf2 \cb3 \strokec5 , \cf2 \cb3 \strokec11 J_Numerical\cf2 \cb3 \strokec5 , \cf2 \cb3 \strokec11 tolX\cf2 \cb3 \strokec5 , \cf2 \cb3 \strokec11 tolF\cf2 \cb3 \strokec5 , \cf2 \cb3 \strokec11 max_iterations\cf2 \cb3 \strokec5 ):\
+    \
+\
+    X\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5  np.\cf2 \cb3 \strokec8 array\cf2 \cb3 \strokec5 (initial_guess, \cf2 \cb3 \strokec9 dtype\cf2 \cb3 \strokec12 =float\cf2 \cb3 \strokec5 )\
+    \
+   \
+\
+    it\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec11 0\cf2 \cb3 \strokec5 \
+    \
+    erroreF\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec11 1\cf2 \cb3 \strokec12 +\cf2 \cb3 \strokec5 tolF\
+    erroreX\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec11 1\cf2 \cb3 \strokec12 +\cf2 \cb3 \strokec5 tolX\
+    \
+    errore\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 []\
+    \
+    \cf2 \cb3 \strokec6 while\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec4 #to do\cf2 \cb3 \strokec5 \
+        \
+        \cf2 \cb3 \strokec6 if\cf2 \cb3 \strokec5  it\cf2 \cb3 \strokec4 #to do\cf2 \cb3 \strokec5 \
+            jx \cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec4 #to do\cf2 \cb3 \strokec5 \
+        \
+            \cf2 \cb3 \strokec6 if\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec4 #to do\cf2 \cb3 \strokec5 \
+                \cf2 \cb3 \strokec12 print\cf2 \cb3 \strokec5 (\cf2 \cb3 \strokec10 "La matrice dello Jacobiano calcolata nell'iterato precedente non \'e8 a rango massimo"\cf2 \cb3 \strokec5 )\
+                \cf2 \cb3 \strokec6 return\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec11 None\cf2 \cb3 \strokec5 , \cf2 \cb3 \strokec11 None\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec11 None\cf2 \cb3 \strokec5 \
+        \
+        fx \cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec4 #To do\cf2 \cb3 \strokec5 \
+        fx \cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5  fx.\cf2 \cb3 \strokec8 squeeze\cf2 \cb3 \strokec5 () \
+        \
+        s \cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+        \
+        Xnew\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do\cf2 \cb3 \strokec5 \
+        \
+        normaXnew\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 np.linalg.\cf2 \cb3 \strokec8 norm\cf2 \cb3 \strokec5 (Xnew,\cf2 \cb3 \strokec11 1\cf2 \cb3 \strokec5 )\
+        \cf2 \cb3 \strokec6 if\cf2 \cb3 \strokec5  normaXnew \cf2 \cb3 \strokec12 !=\cf2 \cb3 \strokec11 0\cf2 \cb3 \strokec5 :\
+            erroreX\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+        \cf2 \cb3 \strokec6 else\cf2 \cb3 \strokec5 :\
+            erroreX\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+        \
+        errore.\cf2 \cb3 \strokec8 append\cf2 \cb3 \strokec5 (erroreX)\
+        fxnew\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do\cf2 \cb3 \strokec5 \
+        erroreF\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5  np.linalg.\cf2 \cb3 \strokec8 norm\cf2 \cb3 \strokec5 (fxnew.\cf2 \cb3 \strokec8 squeeze\cf2 \cb3 \strokec5 (),\cf2 \cb3 \strokec11 1\cf2 \cb3 \strokec5 )\
+        X\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 Xnew\
+        it\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 it\cf2 \cb3 \strokec12 +\cf2 \cb3 \strokec11 1\cf2 \cb3 \strokec5 \
+    \
+    \cf2 \cb3 \strokec6 return\cf2 \cb3 \strokec5  X,it,errore\
+\
+\
+\cf2 \cb3 \strokec6 def\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec8 newton_raphson_sham\cf2 \cb3 \strokec5 (\cf2 \cb3 \strokec11 initial_guess\cf2 \cb3 \strokec5 , \cf2 \cb3 \strokec11 update\cf2 \cb3 \strokec5 , \cf2 \cb3 \strokec11 F_numerical\cf2 \cb3 \strokec5 , \cf2 \cb3 \strokec11 J_Numerical\cf2 \cb3 \strokec5 , \cf2 \cb3 \strokec11 tolX\cf2 \cb3 \strokec5 , \cf2 \cb3 \strokec11 tolF\cf2 \cb3 \strokec5 , \cf2 \cb3 \strokec11 max_iterations\cf2 \cb3 \strokec5 ):\
+    \
+    \
+\
+    X\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5  np.\cf2 \cb3 \strokec8 array\cf2 \cb3 \strokec5 (initial_guess, \cf2 \cb3 \strokec9 dtype\cf2 \cb3 \strokec12 =float\cf2 \cb3 \strokec5 )\
+    \
+   \
+\
+    it\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec11 0\cf2 \cb3 \strokec5 \
+    \
+    erroreF\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec11 1\cf2 \cb3 \strokec12 +\cf2 \cb3 \strokec5 tolF\
+    erroreX\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec11 1\cf2 \cb3 \strokec12 +\cf2 \cb3 \strokec5 tolX\
+    \
+    errore\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 []\
+    \
+    \cf2 \cb3 \strokec6 while\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec4 #to do\cf2 \cb3 \strokec5 \
+        \
+        \cf2 \cb3 \strokec6 if\cf2 \cb3 \strokec5  it\cf2 \cb3 \strokec4 # to to:\cf2 \cb3 \strokec5 \
+            jx \cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec4 #to do\cf2 \cb3 \strokec5 \
+        \
+            \cf2 \cb3 \strokec6 if\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec4 #to do\cf2 \cb3 \strokec5 \
+                \cf2 \cb3 \strokec12 print\cf2 \cb3 \strokec5 (\cf2 \cb3 \strokec10 "La matrice dello Jacobiano calcolata nell'iterato precedente non \'e8 a rango massimo"\cf2 \cb3 \strokec5 )\
+                \cf2 \cb3 \strokec6 return\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec11 None\cf2 \cb3 \strokec5 , \cf2 \cb3 \strokec11 None\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec11 None\cf2 \cb3 \strokec5 \
+        \
+        fx \cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec4 #To do\cf2 \cb3 \strokec5 \
+        fx \cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5  fx.\cf2 \cb3 \strokec8 squeeze\cf2 \cb3 \strokec5 () \
+        \
+        s \cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+        \
+        Xnew\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do\cf2 \cb3 \strokec5 \
+        \
+        normaXnew\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 np.linalg.\cf2 \cb3 \strokec8 norm\cf2 \cb3 \strokec5 (Xnew,\cf2 \cb3 \strokec11 1\cf2 \cb3 \strokec5 )\
+        \cf2 \cb3 \strokec6 if\cf2 \cb3 \strokec5  normaXnew \cf2 \cb3 \strokec12 !=\cf2 \cb3 \strokec11 0\cf2 \cb3 \strokec5 :\
+            erroreX\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+        \cf2 \cb3 \strokec6 else\cf2 \cb3 \strokec5 :\
+            erroreX\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+        \
+        errore.\cf2 \cb3 \strokec8 append\cf2 \cb3 \strokec5 (erroreX)\
+        fxnew\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do\cf2 \cb3 \strokec5 \
+        erroreF\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5  np.linalg.\cf2 \cb3 \strokec8 norm\cf2 \cb3 \strokec5 (fxnew.\cf2 \cb3 \strokec8 squeeze\cf2 \cb3 \strokec5 (),\cf2 \cb3 \strokec11 1\cf2 \cb3 \strokec5 )\
+        X\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 Xnew\
+        it\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 it\cf2 \cb3 \strokec12 +\cf2 \cb3 \strokec11 1\cf2 \cb3 \strokec5 \
+    \
+    \cf2 \cb3 \strokec6 return\cf2 \cb3 \strokec5  X,it,errore\
+\
+\
+\
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec4 #Minimo di una funzion enon lineare\cf2 \cb3 \strokec5 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec6 def\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec8 newton_raphson_minimo\cf2 \cb3 \strokec5 (\cf2 \cb3 \strokec11 initial_guess\cf2 \cb3 \strokec5 , \cf2 \cb3 \strokec11 grad_func\cf2 \cb3 \strokec5 , \cf2 \cb3 \strokec11 Hessian_func\cf2 \cb3 \strokec5 , \cf2 \cb3 \strokec11 tolX\cf2 \cb3 \strokec5 , \cf2 \cb3 \strokec11 tolF\cf2 \cb3 \strokec5 , \cf2 \cb3 \strokec11 max_iterations\cf2 \cb3 \strokec5 ):\
+    \
+\
+    X\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5  np.\cf2 \cb3 \strokec8 array\cf2 \cb3 \strokec5 (initial_guess, \cf2 \cb3 \strokec9 dtype\cf2 \cb3 \strokec12 =float\cf2 \cb3 \strokec5 )\
+    \
+    it\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec11 0\cf2 \cb3 \strokec5 \
+    \
+    erroreF\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec11 1\cf2 \cb3 \strokec12 +\cf2 \cb3 \strokec5 tolX\
+    erroreX\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec11 1\cf2 \cb3 \strokec12 +\cf2 \cb3 \strokec5 tolF\
+    \
+    errore\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 []\
+    \
+    \cf2 \cb3 \strokec6 while\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec4 #to do:\cf2 \cb3 \strokec5 \
+        \
+        Hx \cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec4 #to do\cf2 \cb3 \strokec5 \
+        \
+        \cf2 \cb3 \strokec6 if\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec4 #to do\cf2 \cb3 \strokec5 \
+            \cf2 \cb3 \strokec12 print\cf2 \cb3 \strokec5 (\cf2 \cb3 \strokec10 "La matrice Hessiana calcolata nell'iterato precedente non \'e8 a rango massimo"\cf2 \cb3 \strokec5 )\
+            \cf2 \cb3 \strokec6 return\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec11 None\cf2 \cb3 \strokec5 , \cf2 \cb3 \strokec11 None\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec11 None\cf2 \cb3 \strokec5 \
+        \
+        gfx \cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5   \cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+        gfx \cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5  gfx.\cf2 \cb3 \strokec8 squeeze\cf2 \cb3 \strokec5 () \
+        \
+        s \cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+        \
+        Xnew\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+        \
+        normaXnew\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 np.linalg.\cf2 \cb3 \strokec8 norm\cf2 \cb3 \strokec5 (Xnew,\cf2 \cb3 \strokec11 1\cf2 \cb3 \strokec5 )\
+        \cf2 \cb3 \strokec6 if\cf2 \cb3 \strokec5  normaXnew\cf2 \cb3 \strokec12 !=\cf2 \cb3 \strokec11 0\cf2 \cb3 \strokec5 :\
+            erroreX\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do\cf2 \cb3 \strokec5 \
+        \cf2 \cb3 \strokec6 else\cf2 \cb3 \strokec5 :\
+            erroreX\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do\cf2 \cb3 \strokec5 \
+            \
+        errore.\cf2 \cb3 \strokec8 append\cf2 \cb3 \strokec5 (erroreX)\
+        gfxnew\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+        erroreF\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5  np.linalg.\cf2 \cb3 \strokec8 norm\cf2 \cb3 \strokec5 (gfxnew.\cf2 \cb3 \strokec8 squeeze\cf2 \cb3 \strokec5 (),\cf2 \cb3 \strokec11 1\cf2 \cb3 \strokec5 )\
+        X\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 Xnew\
+        it\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 it\cf2 \cb3 \strokec12 +\cf2 \cb3 \strokec11 1\cf2 \cb3 \strokec5 \
+    \
+    \cf2 \cb3 \strokec6 return\cf2 \cb3 \strokec5  X,it,errore\
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec4 #Metodi Iterativi basati sullo splitting della matrice: jacobi, gauss-Seidel - Gauss_seidel SOR\cf2 \cb3 \strokec5 \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec6 def\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec8 jacobi\cf2 \cb3 \strokec5 (\cf2 \cb3 \strokec11 A\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec11 b\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec11 x0\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec11 toll\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec11 it_max\cf2 \cb3 \strokec5 ):\
+    errore\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec11 1000\cf2 \cb3 \strokec5 \
+    d\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 np.\cf2 \cb3 \strokec8 diag\cf2 \cb3 \strokec5 (A)\
+    n\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 A.shape[\cf2 \cb3 \strokec11 0\cf2 \cb3 \strokec5 ]\
+    invM\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 np.\cf2 \cb3 \strokec8 diag\cf2 \cb3 \strokec5 (\cf2 \cb3 \strokec11 1\cf2 \cb3 \strokec12 /\cf2 \cb3 \strokec5 d)\
+    E\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+    F\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+    N\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+    T\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+    autovalori\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 np.linalg.\cf2 \cb3 \strokec8 eigvals\cf2 \cb3 \strokec5 (T)\
+    raggiospettrale\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+    \cf2 \cb3 \strokec12 print\cf2 \cb3 \strokec5 (\cf2 \cb3 \strokec10 "raggio spettrale jacobi"\cf2 \cb3 \strokec5 , raggiospettrale)\
+    it\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec11 0\cf2 \cb3 \strokec5 \
+    \
+    er_vet\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 []\
+    \cf2 \cb3 \strokec6 while\cf2 \cb3 \strokec5  it\cf2 \cb3 \strokec12 <=\cf2 \cb3 \strokec5 it_max \cf2 \cb3 \strokec6 and\cf2 \cb3 \strokec5  errore\cf2 \cb3 \strokec12 >=\cf2 \cb3 \strokec5 toll:\
+        x\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+        errore\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+        er_vet.\cf2 \cb3 \strokec8 append\cf2 \cb3 \strokec5 (errore)\
+        x0\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 x.\cf2 \cb3 \strokec8 copy\cf2 \cb3 \strokec5 ()\
+        it\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 it\cf2 \cb3 \strokec12 +\cf2 \cb3 \strokec11 1\cf2 \cb3 \strokec5 \
+    \cf2 \cb3 \strokec6 return\cf2 \cb3 \strokec5  x,it,er_vet\
+\
+\
+\cf2 \cb3 \strokec6 def\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec8 gauss_seidel\cf2 \cb3 \strokec5 (\cf2 \cb3 \strokec11 A\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec11 b\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec11 x0\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec11 toll\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec11 it_max\cf2 \cb3 \strokec5 ):\
+    errore\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec11 1000\cf2 \cb3 \strokec5 \
+    d\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+    D\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+    E\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+    F\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+    M\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+    N\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+    T\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+    autovalori\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 np.linalg.\cf2 \cb3 \strokec8 eigvals\cf2 \cb3 \strokec5 (T)\
+    raggiospettrale\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+    \cf2 \cb3 \strokec12 print\cf2 \cb3 \strokec5 (\cf2 \cb3 \strokec10 "raggio spettrale Gauss-Seidel "\cf2 \cb3 \strokec5 ,raggiospettrale)\
+    it\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec11 0\cf2 \cb3 \strokec5 \
+    er_vet\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 []\
+    \cf2 \cb3 \strokec6 while\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+        x\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+        errore\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+        er_vet.\cf2 \cb3 \strokec8 append\cf2 \cb3 \strokec5 (errore)\
+        x0\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 x.\cf2 \cb3 \strokec8 copy\cf2 \cb3 \strokec5 ()\
+        it\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 it\cf2 \cb3 \strokec12 +\cf2 \cb3 \strokec11 1\cf2 \cb3 \strokec5 \
+    \cf2 \cb3 \strokec6 return\cf2 \cb3 \strokec5  x,it,er_vet\
+\
+\cf2 \cb3 \strokec6 def\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec8 gauss_seidel_sor\cf2 \cb3 \strokec5 (\cf2 \cb3 \strokec11 A\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec11 b\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec11 x0\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec11 toll\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec11 it_max\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec11 omega\cf2 \cb3 \strokec5 ):\
+    errore\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec11 1000\cf2 \cb3 \strokec5 \
+    d\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+    D\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+    E\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+    F\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do  \cf2 \cb3 \strokec5 \
+    Momega\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 D\cf2 \cb3 \strokec12 +\cf2 \cb3 \strokec5 omega\cf2 \cb3 \strokec12 *\cf2 \cb3 \strokec5 E\
+    Nomega\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 (\cf2 \cb3 \strokec11 1\cf2 \cb3 \strokec12 -\cf2 \cb3 \strokec5 omega)\cf2 \cb3 \strokec12 *\cf2 \cb3 \strokec5 D\cf2 \cb3 \strokec12 -\cf2 \cb3 \strokec5 omega\cf2 \cb3 \strokec12 *\cf2 \cb3 \strokec5 F\
+    T\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do\cf2 \cb3 \strokec5 \
+    autovalori\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 np.linalg.\cf2 \cb3 \strokec8 eigvals\cf2 \cb3 \strokec5 (T)\
+    raggiospettrale\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do\cf2 \cb3 \strokec5 \
+    \cf2 \cb3 \strokec12 print\cf2 \cb3 \strokec5 (\cf2 \cb3 \strokec10 "raggio spettrale Gauss-Seidel SOR "\cf2 \cb3 \strokec5 , raggiospettrale)\
+    \
+    M\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+    N\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+    it\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec11 0\cf2 \cb3 \strokec5 \
+    xold\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 x0.\cf2 \cb3 \strokec8 copy\cf2 \cb3 \strokec5 ()\
+    xnew\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 x0.\cf2 \cb3 \strokec8 copy\cf2 \cb3 \strokec5 ()\
+    er_vet\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 []\
+    \cf2 \cb3 \strokec6 while\cf2 \cb3 \strokec5  it\cf2 \cb3 \strokec12 <=\cf2 \cb3 \strokec5 it_max \cf2 \cb3 \strokec6 and\cf2 \cb3 \strokec5  errore\cf2 \cb3 \strokec12 >=\cf2 \cb3 \strokec5 toll:\
+        \
+        xtilde\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+        xnew\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+        errore\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+        er_vet.\cf2 \cb3 \strokec8 append\cf2 \cb3 \strokec5 (errore)\
+        xold\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 xnew.\cf2 \cb3 \strokec8 copy\cf2 \cb3 \strokec5 ()\
+        it\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 it\cf2 \cb3 \strokec12 +\cf2 \cb3 \strokec11 1\cf2 \cb3 \strokec5 \
+    \cf2 \cb3 \strokec6 return\cf2 \cb3 \strokec5  xnew,it,er_vet\
+\
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec4 #Metodi di Discesa\cf2 \cb3 \strokec5 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec6 def\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec8 steepestdescent\cf2 \cb3 \strokec5 (\cf2 \cb3 \strokec11 A\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec11 b\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec11 x0\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec11 itmax\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec11 tol\cf2 \cb3 \strokec5 ):\
+ \
+    n,m\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 A.shape\
+    \cf2 \cb3 \strokec6 if\cf2 \cb3 \strokec5  n\cf2 \cb3 \strokec12 !=\cf2 \cb3 \strokec5 m:\
+        \cf2 \cb3 \strokec12 print\cf2 \cb3 \strokec5 (\cf2 \cb3 \strokec10 "Matrice non quadrata"\cf2 \cb3 \strokec5 )\
+        \cf2 \cb3 \strokec6 return\cf2 \cb3 \strokec5  [],[]\
+    \
+    \
+   \cf2 \cb3 \strokec4 # inizializzare le variabili necessarie\cf2 \cb3 \strokec5 \
+    x \cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5  x0\
+\
+     \
+    r \cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+    p \cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+    it \cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec11 0\cf2 \cb3 \strokec5 \
+    nb\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 np.linalg.\cf2 \cb3 \strokec8 norm\cf2 \cb3 \strokec5 (b)\
+    errore\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 np.linalg.\cf2 \cb3 \strokec8 norm\cf2 \cb3 \strokec5 (r)\cf2 \cb3 \strokec12 /\cf2 \cb3 \strokec5 nb\
+    vec_sol\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 []\
+    vec_sol.\cf2 \cb3 \strokec8 append\cf2 \cb3 \strokec5 (x.\cf2 \cb3 \strokec8 copy\cf2 \cb3 \strokec5 ())\
+    vet_r\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 []\
+    vet_r.\cf2 \cb3 \strokec8 append\cf2 \cb3 \strokec5 (errore)\
+     \
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec4 # utilizzare il metodo del gradiente per trovare la soluzione\cf2 \cb3 \strokec5 \
+    \cf2 \cb3 \strokec6 while\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+        it\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 it\cf2 \cb3 \strokec12 +\cf2 \cb3 \strokec11 1\cf2 \cb3 \strokec5 \
+        Ap\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+       \
+        alpha \cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec4 # to do\cf2 \cb3 \strokec5 \
+                \
+        x \cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+        \
+         \
+        vec_sol.\cf2 \cb3 \strokec8 append\cf2 \cb3 \strokec5 (x.\cf2 \cb3 \strokec8 copy\cf2 \cb3 \strokec5 ())\
+        r\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+        errore\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 np.linalg.\cf2 \cb3 \strokec8 norm\cf2 \cb3 \strokec5 (r)\cf2 \cb3 \strokec12 /\cf2 \cb3 \strokec5 nb\
+        vet_r.\cf2 \cb3 \strokec8 append\cf2 \cb3 \strokec5 (errore)\
+        p \cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+        \
+    iterates_array \cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5  np.\cf2 \cb3 \strokec8 vstack\cf2 \cb3 \strokec5 ([arr.T \cf2 \cb3 \strokec6 for\cf2 \cb3 \strokec5  arr \cf2 \cb3 \strokec6 in\cf2 \cb3 \strokec5  vec_sol])\
+    \cf2 \cb3 \strokec6 return\cf2 \cb3 \strokec5  x,vet_r,iterates_array,it\
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec6 def\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec8 conjugate_gradient\cf2 \cb3 \strokec5 (\cf2 \cb3 \strokec11 A\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec11 b\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec11 x0\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec11 itmax\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec11 tol\cf2 \cb3 \strokec5 ):\
+    n,m\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 A.shape\
+    \cf2 \cb3 \strokec6 if\cf2 \cb3 \strokec5  n\cf2 \cb3 \strokec12 !=\cf2 \cb3 \strokec5 m:\
+        \cf2 \cb3 \strokec12 print\cf2 \cb3 \strokec5 (\cf2 \cb3 \strokec10 "Matrice non quadrata"\cf2 \cb3 \strokec5 )\
+        \cf2 \cb3 \strokec6 return\cf2 \cb3 \strokec5  [],[]\
+    \
+    \
+   \cf2 \cb3 \strokec4 # inizializzare le variabili necessarie\cf2 \cb3 \strokec5 \
+    x \cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5  x0\
+    \
+    r \cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+    p \cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5  \'e0to do \
+    it \cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec11 0\cf2 \cb3 \strokec5 \
+    nb\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 np.linalg.\cf2 \cb3 \strokec8 norm\cf2 \cb3 \strokec5 (b)\
+    errore\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 np.linalg.\cf2 \cb3 \strokec8 norm\cf2 \cb3 \strokec5 (r)\cf2 \cb3 \strokec12 /\cf2 \cb3 \strokec5 nb\
+    vec_sol\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 []\
+    vec_sol.\cf2 \cb3 \strokec8 append\cf2 \cb3 \strokec5 (x0.\cf2 \cb3 \strokec8 copy\cf2 \cb3 \strokec5 ())\
+    vet_r\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 []\
+    vet_r.\cf2 \cb3 \strokec8 append\cf2 \cb3 \strokec5 (errore)\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec4 # utilizzare il metodo del gradiente coniugato per calcolare la soluzione\cf2 \cb3 \strokec5 \
+    \cf2 \cb3 \strokec6 while\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+        it\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 it\cf2 \cb3 \strokec12 +\cf2 \cb3 \strokec11 1\cf2 \cb3 \strokec5 \
+        Ap\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do A.dot(p)\cf2 \cb3 \strokec5 \
+        alpha \cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+        x \cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+        vec_sol.\cf2 \cb3 \strokec8 append\cf2 \cb3 \strokec5 (x.\cf2 \cb3 \strokec8 copy\cf2 \cb3 \strokec5 ())\
+        rtr_old\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do\cf2 \cb3 \strokec5 \
+        r\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+        gamma\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+        errore\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 np.linalg.\cf2 \cb3 \strokec8 norm\cf2 \cb3 \strokec5 (r)\cf2 \cb3 \strokec12 /\cf2 \cb3 \strokec5 nb\
+        vet_r.\cf2 \cb3 \strokec8 append\cf2 \cb3 \strokec5 (errore)\
+        p \cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+   \
+    iterates_array \cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5  np.\cf2 \cb3 \strokec8 vstack\cf2 \cb3 \strokec5 ([arr.T \cf2 \cb3 \strokec6 for\cf2 \cb3 \strokec5  arr \cf2 \cb3 \strokec6 in\cf2 \cb3 \strokec5  vec_sol])\
+    \cf2 \cb3 \strokec6 return\cf2 \cb3 \strokec5  x,vet_r,iterates_array,it\
+\
+\cf2 \cb3 \strokec4 #Soluzione di sistemi sovradeterminati\cf2 \cb3 \strokec5 \
+\
+\pard\pardeftab720\partightenfactor0
+\cf2 \cb3 \strokec6 def\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec8 eqnorm\cf2 \cb3 \strokec5 (\cf2 \cb3 \strokec11 A\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec11 b\cf2 \cb3 \strokec5 ):\
+ \
+    G\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec4 #to do  \cf2 \cb3 \strokec5 \
+    f\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+    \
+    L\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 \
+    U\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 \
+        \
+        \
+    \cf2 \cb3 \strokec6 return\cf2 \cb3 \strokec5  x\
+\
+\
+\cf2 \cb3 \strokec6 def\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec8 qrLS\cf2 \cb3 \strokec5 (\cf2 \cb3 \strokec11 A\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec11 b\cf2 \cb3 \strokec5 ):\
+    n\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 A.shape[\cf2 \cb3 \strokec11 1\cf2 \cb3 \strokec5 ]  \cf2 \cb3 \strokec4 # numero di colonne di A\cf2 \cb3 \strokec5 \
+    Q,R\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 spLin.\cf2 \cb3 \strokec8 qr\cf2 \cb3 \strokec5 (A)\
+    h\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+    x,_ \cf2 \cb3 \strokec4 #to do\cf2 \cb3 \strokec5 \
+    residuo\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+    \cf2 \cb3 \strokec6 return\cf2 \cb3 \strokec5  x,residuo\
+\
+\
+\
+\cf2 \cb3 \strokec6 def\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec8 SVDLS\cf2 \cb3 \strokec5 (\cf2 \cb3 \strokec11 A\cf2 \cb3 \strokec5 ,\cf2 \cb3 \strokec11 b\cf2 \cb3 \strokec5 ):\
+    m,n\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 A.shape  \cf2 \cb3 \strokec4 #numero di righe e  numero di colonne di A\cf2 \cb3 \strokec5 \
+    U,s,\cf2 \cb3 \strokec11 VT\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 spLin.\cf2 \cb3 \strokec8 svd\cf2 \cb3 \strokec5 (A)  \
+    \
+    V\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec11 VT\cf2 \cb3 \strokec5 .T\
+    thresh\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 np.\cf2 \cb3 \strokec8 spacing\cf2 \cb3 \strokec5 (\cf2 \cb3 \strokec11 1\cf2 \cb3 \strokec5 )\cf2 \cb3 \strokec12 *\cf2 \cb3 \strokec5 m\cf2 \cb3 \strokec12 *\cf2 \cb3 \strokec5 s[\cf2 \cb3 \strokec11 0\cf2 \cb3 \strokec5 ] \cf2 \cb3 \strokec4 ##Calcolo del rango della matrice, numero dei valori singolari maggiori di una soglia\cf2 \cb3 \strokec5 \
+    k\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+    \
+    d\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+    d1\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+    s1\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+\
+\
+\cf2 \cb3 \strokec6 def\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec8 InterpL\cf2 \cb3 \strokec5 (x, y, xx):\
+     \
+     \cf2 \cb3 \strokec9 n\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do\cf2 \cb3 \strokec5 \
+     \cf2 \cb3 \strokec9 m\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+     \cf2 \cb3 \strokec9 L\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec5 np.\cf2 \cb3 \strokec8 zeros\cf2 \cb3 \strokec5 ((m,n))\
+     \cf2 \cb3 \strokec6 for\cf2 \cb3 \strokec5  j \cf2 \cb3 \strokec4 #to do :\cf2 \cb3 \strokec5 \
+        \cf2 \cb3 \strokec9 p\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+        L[:,j]\cf2 \cb3 \strokec12 =\cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+    \
+    \
+     \cf2 \cb3 \strokec6 return\cf2 \cb3 \strokec5  \cf2 \cb3 \strokec4 #to do \cf2 \cb3 \strokec5 \
+}
