@@ -259,7 +259,7 @@ def newton_raphson(initial_guess, F_numerical, J_Numerical, tolX, tolF, max_iter
     
     return X,it,errore
 
-def def newton_raphson_corde(initial_guess, F_numerical, J_Numerical, tolX, tolF, max_iterations):
+def newton_raphson_corde(initial_guess, F_numerical, J_Numerical, tolX, tolF, max_iterations):
     
 
     X= np.array(initial_guess, dtype=float)
